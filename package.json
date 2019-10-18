@@ -1,0 +1,20 @@
+{
+  "name": "PageDrop",
+  "version": "1.0.0",
+  "description": "stuff",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cooperbrislain/pagedrop.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cooperbrislain/pagedrop/issues"
+  },
+  "homepage": "https://github.com/cooperbrislain/pagedrop#readme"
+}
