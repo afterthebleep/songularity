@@ -1,11 +1,11 @@
 import React from 'react';
-
+import './style.css'
 
 const Card = props => {
   return(
       <div className="card text center">
       <div className="overflow">
-< img src = "/assets/eq_IMG.jpg" alt = "" />
+        < img className = "card-img-top" src = "/assets/eq_IMG.jpg" alt = ""/>
       </div>
       
       <div className="card-body text-dark">

@@ -7,13 +7,13 @@ class Cards extends Component {
     <div className="container-fluid d-flex justify-content-center">
         <div className="row">
           <div className="col-md-4">
-          <Card/>
+            <Card/>
           </div>
           <div className="col-md-4">
-          <Card/>
+            <Card/>
           </div>
           <div className="col-md-4">
-          <Card/>
+            <Card/>
           </div>
         </div>
     </div>
@@ -21,4 +21,4 @@ class Cards extends Component {
   }
 }
 
-export default Card;
+export default Cards;
