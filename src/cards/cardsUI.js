@@ -22,7 +22,7 @@ const Card = props => {
           <li>Track 04</li>
         </ul>
       </div>
-      <a href='#' className="btn btn-outline-success">Push my button</a>
+      <button className="btn btn-outline-success">Push my button</button>
       </div>
       </div>
   );
