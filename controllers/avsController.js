@@ -1,7 +1,7 @@
 const connection = require('./../config/connection');
 
 module.exports = {
-    getBlogs: (req, res) => {
+    getAvs: (req, res) => {
         const query = `SELECT * FROM av 
             INNER JOIN audio ON av.fk_audio_id = audio.id
             INNER JOIN video ON av.fk_video_id = video.id;`;
@@ -12,10 +12,26 @@ module.exports = {
             res.json(avs);
         });
     },
-    createBlog: (req, res) => {
-        const { blog } = req.body;
-        const query = `INSERT INTO blogs (blog) VALUES(?)`;            
-        connection.query(query, blog, (err, response) => {
+    createAv: (req, res) => {
+        const { audio_url, video_url } = req.body;
+        let query, audio_id, video_id;
+        query = `SELECT * FROM audio WHERE url = ?`;
+        if (/*query result*/) {
+            audio_id = /*result-id*/
+        } else {
+            query = `INSERT INTO audio (url) VALUES (?)`;
+            connection.query(query, audio_url);
+            // get line number from result;
+        }
+        if (/*query result*/) {
+            video_id = /*result-id*/
+        } else {
+            query = `INSERT INTO video (url) VALUES (?)`;
+            connection.query(query, video_url);
+            // get line number from result;
+        }
+        query = `INSERT INTO av (fk_audio_id, fk_ideo_id) VALUES(?)`;
+        connection.query(query, [audio_id, video_id], (err, response) => {
             if(err) {
                 return res.status(403).send(err);
             }
