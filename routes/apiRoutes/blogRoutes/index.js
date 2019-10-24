@@ -1,20 +1,14 @@
 const router = require('express').Router();
-const blogController = require('./../../../controllers/blogsController');
+const blogController = require('./../../../controllers/visualsController');
 
-
-// /api/blogs
 router.route('/')
-    .get(blogController.getBlogs)
-    .post(blogController.createBlog)
+    .get(avController.getAv)
+    .post(avController.createAv);
 
 // /api/blogs
-router.route('/:blogId')
-    .get(blogController.getBlog)
-    .post(blogController.addComment)
-    .delete(blogController.deleteBlog)
-
-// /api/blogs/comments/:blogId
-router.route('/comments/:blogId')
-    .get(blogController.getBlogsComments);
+// router.route('/:blogId')
+//     .get(blogController.getBlog)
+//     .post(blogController.addComment)
+//     .delete(blogController.deleteBlog)
 
 module.exports = router;

@@ -2,12 +2,14 @@ const connection = require('./../config/connection');
 
 module.exports = {
     getBlogs: (req, res) => {
-        const query = `SELECT * FROM blogs;`;
-        connection.query(query, (err, blogs) => {
+        const query = `SELECT * FROM av 
+            INNER JOIN audio ON av.fk_audio_id = audio.id
+            INNER JOIN video ON av.fk_video_id = video.id;`;
+        connection.query(query, (err, avs) => {
             if(err) {
                 return res.status(404).send(err);
             }
-            res.json(blogs);
+            res.json(avs);
         });
     },
     createBlog: (req, res) => {
