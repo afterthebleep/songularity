@@ -1,9 +1,7 @@
 const router = require('express').Router();
 
-const blogRoutes = require('./avRoutes');
-const commentRoutes = require('./commentRoutes');
+const avRoutes = require('./avRoutes');
 
-router.use('/av', visionRoutes);
-// router.use('/comments', commentRoutes);
+router.use('/av', avRoutes);
 
 module.exports = router;

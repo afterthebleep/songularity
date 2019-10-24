@@ -1,14 +1,13 @@
 const router = require('express').Router();
-const blogController = require('./../../../controllers/visualsController');
+const avController = require('./../../../controllers/avController');
 
 router.route('/')
-    .get(avController.getAv)
+    .get(avController.getAvs)
     .post(avController.createAv);
 
-// /api/blogs
-// router.route('/:blogId')
-//     .get(blogController.getBlog)
-//     .post(blogController.addComment)
-//     .delete(blogController.deleteBlog)
+// /api/av
+router.route('/:avId')
+    .get(avController.getAv)
+    .delete(avController.deleteAv);
 
 module.exports = router;
