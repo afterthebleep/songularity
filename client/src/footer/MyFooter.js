@@ -14,7 +14,7 @@ class MyFooter extends Component {
             <div class="container">
               <ul class="nav navbar-nav pull-sm-center">
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Previous</a>
+                  <a class="nav-link" href="#" style={{textAlign: "center"}}>Previous</a>
                 </li>
               </ul>
               <ul class="nav navbar-nav navbar-logo mx-auto">
