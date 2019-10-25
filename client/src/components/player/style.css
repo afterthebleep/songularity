@@ -1,0 +1,10 @@
+.visual-player {
+    overflow: hidden;
+    max-height: 300px;
+}
+
+.music-player {
+    overflow: hidden;
+    width: 1px;
+    height: 1px;
+}
