@@ -13,16 +13,6 @@ const Card = props => {
       <h4 className="card-title">Title</h4>
       
       <p className="card-text text-secondary">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Amet sequi vel culpa saepe? A, dolore possimus dolorum, voluptatibus, consequuntur consequatur ipsam incidunt omnis atque delectus nam nostrum. Consequuntur, quis molestiae!</p>
-      
-      <div className="tracks">
-        <ul>
-          <li>Track 01</li>
-          <li>Track 02</li>
-          <li>Track 03</li>
-          <li>Track 04</li>
-        </ul>
-      </div>
-      <button className="btn btn-outline-success">Push my button</button>
       </div>
       </div>
   );
