@@ -10,17 +10,26 @@ class MyFooter extends Component {
   render() {
     return (
       <Navbar bg="light" expand="lg">
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
-       
-          <Form inline>
-            <Button variant="outline-success">Previous</Button>
-            <Button variant="outline-success">Play</Button>
-            <Button variant="outline-success">Next</Button>
-          </Form>
-        </Navbar.Collapse>
-        </Navbar>
-      
+          <nav class="navbar bg-faded">
+            <div class="container">
+              <ul class="nav navbar-nav pull-sm-center">
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Previous</a>
+                </li>
+              </ul>
+              <ul class="nav navbar-nav navbar-logo mx-auto">
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Play | STOP</a>
+                </li>
+              </ul>
+              <ul class="nav navbar-nav pull-sm-center">
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Next</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+      </Navbar>
     );
   }
 }
