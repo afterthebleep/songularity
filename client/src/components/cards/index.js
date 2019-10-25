@@ -19,7 +19,7 @@ class Cards extends Component {
         ];
         return (
             <div className="container-fluid d-flex justify-content-center">
-                { avs.map((av, i) => { return <Card index={i} title={av.title} thumbnail={av.thumbnail}/> })}
+                { avs.map((av, i) => { return <Card key={i} title={av.title} thumbnail={av.thumbnail}/> })}
             </div>
         );
     }
