@@ -30,24 +30,19 @@ class Shadertoy extends Component {
     stopShader = () => this.setState( { playing: false });
 
     render = () => {
-        let shaderCode = this.state.Shader.renderpass[0].code;
+        const { Shader } = this.state;
+        const shaderCode = '';
         return (
             this.state.playing?
-                <>
-                        <ShadertoyReact onClick={this.stopShader} shader={shaderCode} />
-                </>
+                <div onClick={this.stopShader}>
+                    <ShadertoyReact  shader={shaderCode} />
+                </div>
                 :
-                <>
-                    <div className="shadertoy" onClick={this.playShader}>
-                        <img className="card-img-top" src={`./assets/images/thumbnails/${this.props.thumbnail}`} alt="" />
-                    </div>
-                </>
+                <div className="shadertoy" onClick={this.playShader}>
+                    <img className="card-img-top" src={`./assets/images/thumbnails/${this.props.thumbnail}`} alt="" />
+                </div>
         );
     };
-
-    // handleClick = () => {
-    //     this.setState(state => ({ playing: !state.playing }));
-    // };
 }
 
 export default Shadertoy;
